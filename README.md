@@ -29,7 +29,7 @@ pb-update
 ```
 5. Set the boot script url:
 ```bash
-fw_setenv petitboot,userscript=http://raw.githubusercontent.com/EdgeNet-project/hardware/main/boot/odroid-n2.sh
+fw_setenv petitboot,userscript http://raw.githubusercontent.com/EdgeNet-project/hardware/main/boot/odroid-n2.sh
 ```
 6. Reboot and verify that the board actually runs the script
 
