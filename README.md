@@ -22,16 +22,22 @@ This procedure is currently repeated on every boot.
 1. Set the `MMC/SPI` switch at the rear of the board to `SPI`
 2. Plug a keyboard and a screen (alternatively, connect via the serial port)
 3. Plug the power cord
-4. Update petitboot (we require version `20220317` at-least):
+4. Initialize the hardware clock:
+```bash
+# Replace with the actual date and time
+date -s "2022-06-08 21:59"
+hwlock -w
+```
+5. Update petitboot (we require version `20220317` at-least):
 ```bash
 pb-update
 # ctrl+alt+del to reboot
 ```
-5. Set the boot script url:
+6. Set the boot script url:
 ```bash
 fw_setenv petitboot,userscript http://raw.githubusercontent.com/EdgeNet-project/hardware/main/boot/odroid-n2.sh
 ```
-6. Reboot and verify that the board actually runs the script
+7. Reboot and verify that the board actually runs the script
 
 [node]: https://github.com/EdgeNet-project/node
 [petitboot]: https://forum.odroid.com/viewtopic.php?t=33873
