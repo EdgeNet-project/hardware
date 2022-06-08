@@ -34,6 +34,7 @@ chmod +x /tmp/root/bootstrap.sh
 cat > /tmp/root/etc/systemd/system/edgenet-firstboot.service <<END
 [Unit]
 Description=EdgeNet first boot
+After=network.target
 
 [Service]
 ExecStart=/bootstrap.sh
