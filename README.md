@@ -31,6 +31,7 @@ pb-update
 ```bash
 fw_setenv petitboot,userscript=http://raw.githubusercontent.com/EdgeNet-project/hardware/main/boot/odroid-n2.sh
 ```
+6. Reboot and verify that the board actually runs the script
 
 [node]: https://github.com/EdgeNet-project/node
 [petitboot]: https://forum.odroid.com/viewtopic.php?t=33873
