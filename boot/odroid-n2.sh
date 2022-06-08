@@ -28,7 +28,7 @@ partprobe
 mkdir /tmp/root
 mount /dev/mmcblk0p2 /tmp/root
 
-wget -O /tmp/root/bootstrap.sh https://raw.githubusercontent.com/EdgeNet-project/hardware/main/bootstrap.sh
+wget -O /tmp/root/bootstrap.sh https://raw.githubusercontent.com/EdgeNet-project/node/main/bootstrap.sh
 chmod +x /tmp/root/bootstrap.sh
 
 cat > /tmp/root/etc/systemd/system/edgenet-firstboot.service <<END
