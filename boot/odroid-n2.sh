@@ -22,11 +22,13 @@ fi
 xzcat ${LOCAL_URL} | dd conv=fsync bs=500M of=/dev/mmcblk0
 rm ${LOCAL_URL}
 
-# 2) Mount the root partition and install the firstboot service
+# 2) Mount the root partition
 
 partprobe
 mkdir /tmp/root
 mount /dev/mmcblk0p2 /tmp/root
+
+# 3) Install the firstboot service
 
 wget -O /tmp/root/bootstrap.sh https://raw.githubusercontent.com/EdgeNet-project/node/main/bootstrap.sh
 chmod +x /tmp/root/bootstrap.sh
@@ -40,6 +42,8 @@ After=network.target
 ExecStart=/bootstrap.sh
 Type=oneshot
 RemainAfterExit=yes
+Restart=on-failure
+RestartSec=15s
 
 [Install]
 WantedBy=multi-user.target
@@ -47,5 +51,9 @@ END
 
 ln -fs /etc/systemd/system/edgenet-firstboot.service /tmp/root/etc/systemd/system/multi-user.target.wants/edgenet-firstboot.service
 
-# 3) Give some time to review the output and boot
+# 4) Enable the hardware watchdog
+
+echo "RuntimeWatchdogSec=600" >> /tmp/root/etc/systemd/system.conf
+
+# 5) Give some time to review the output and boot
 sleep 5
