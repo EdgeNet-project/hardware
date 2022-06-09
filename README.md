@@ -20,8 +20,8 @@ This procedure is currently repeated on every boot.
 ### Initial setup
 
 1. Set the `MMC/SPI` switch at the rear of the board to `SPI`
-2. Plug a keyboard and a screen (alternatively, connect via the serial port)
-3. Plug the power cord
+2. Plug a keyboard and a screen, or connect via the serial port
+3. Plug an Ethernet cable and the power cord
 4. Initialize the hardware clock:
 ```bash
 # Replace with the actual date and time
