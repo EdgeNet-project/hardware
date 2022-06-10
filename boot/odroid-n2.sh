@@ -42,6 +42,8 @@ Type=oneshot
 RemainAfterExit=yes
 Restart=on-failure
 RestartSec=15s
+# Join the EdgeNet@home cluster
+Environment="EDGENET_PLAYBOOK=edgenet-at-home-node.yml"
 
 [Install]
 WantedBy=multi-user.target
