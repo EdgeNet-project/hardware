@@ -55,5 +55,9 @@ ln -fs /etc/systemd/system/edgenet-firstboot.service /tmp/root/etc/systemd/syste
 
 echo "RuntimeWatchdogSec=600" >> /tmp/root/etc/systemd/system.conf
 
-# 5) Give some time to review the output and boot
+# 5) Disable root SSH login
+
+echo "PermitRootLogin no" >> /tmp/root/etc/ssh/sshd_config
+
+# 6) Give some time to review the output and boot
 sleep 5
