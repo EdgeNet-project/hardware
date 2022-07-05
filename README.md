@@ -26,7 +26,7 @@ This procedure is currently repeated on every boot.
 ```bash
 # Replace with the actual date and time
 date -s "2022-06-08 21:59"
-hwlock -w
+hwclock -w
 ```
 5. Update petitboot (we require version `20220317` at-least):
 ```bash
