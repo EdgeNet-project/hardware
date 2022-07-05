@@ -59,5 +59,12 @@ echo "RuntimeWatchdogSec=600" >> /tmp/root/etc/systemd/system.conf
 
 echo "PermitRootLogin no" >> /tmp/root/etc/ssh/sshd_config
 
-# 6) Give some time to review the output and boot
+# 6) Prevent unattended-upgrades from running on first boot
+
+cat <<EOF > /tmp/root/etc/apt/apt.conf.d/20auto-upgrades
+APT::Periodic::Update-Package-Lists "0";
+APT::Periodic::Unattended-Upgrade "0";
+EOF
+
+# 7) Give some time to review the output and boot
 sleep 5
