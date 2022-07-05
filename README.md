@@ -39,5 +39,13 @@ fw_setenv petitboot,userscript http://raw.githubusercontent.com/EdgeNet-project/
 ```
 7. Reboot and verify that the board actually runs the script
 
+## Debugging
+
+```bash
+journalctl -fu edgenet-firstboot
+journalctl -fu edgenet
+journalctl -fu kubelet
+```
+
 [node]: https://github.com/EdgeNet-project/node
 [petitboot]: https://forum.odroid.com/viewtopic.php?t=33873
