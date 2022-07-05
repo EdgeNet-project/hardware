@@ -3,7 +3,7 @@
 set -ux
 
 LOCAL_URL=/tmp/image.xz
-REMOTE_URL=https://de.eu.odroid.in/ubuntu_20.04lts/n2/ubuntu-20.04-4.9-minimal-odroid-n2-20220228.img.xz
+REMOTE_URL=http://de.eu.odroid.in/ubuntu_20.04lts/n2/ubuntu-20.04-4.9-minimal-odroid-n2-20220228.img.xz
 REMOTE_MD5=efd20d51d03e2286c79768b37e031e79
 
 # 1) Download and write the disk image to the eMMC
