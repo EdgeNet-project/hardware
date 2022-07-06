@@ -12,8 +12,7 @@ N2 boards have three main memories:
 Our current boot procedure is as follows:
 1. petitboot loads the [`boot/odroid-n2.sh`](/boot/odroid-n2.sh) script from GitHub.
 2. The script fetch a minimal Ubuntu image and write it to the eMMC.
-3. The script downloads the EdgeNet bootstrap script from the [node][node] repository and set it to run on boot.
-4. petitboot boots from the eMMC.
+3. petitboot boots from the eMMC.
 
 This procedure is currently repeated on every boot.
 
@@ -42,7 +41,6 @@ fw_setenv petitboot,userscript http://raw.githubusercontent.com/EdgeNet-project/
 ## Debugging
 
 ```bash
-journalctl -fu edgenet-firstboot
 journalctl -fu edgenet
 journalctl -fu kubelet
 ```
