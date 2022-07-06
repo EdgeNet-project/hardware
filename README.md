@@ -27,16 +27,18 @@ This procedure is currently repeated on every boot.
 date -s "2022-06-08 21:59"
 hwclock -w
 ```
-5. Update petitboot (we require version `20220317` at-least):
-```bash
-pb-update
-# ctrl+alt+del to reboot
-```
-6. Set the boot script url:
+
+5. Set the boot script url:
 ```bash
 fw_setenv petitboot,userscript http://raw.githubusercontent.com/EdgeNet-project/hardware/main/boot/odroid-n2.sh
 ```
-7. Reboot and verify that the board actually runs the script
+
+6. Update petitboot (we require version `20220317` at-least):
+```bash
+pb-update
+```
+
+7. Verify that the board runs the script
 
 ## Debugging
 
