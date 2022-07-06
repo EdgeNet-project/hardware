@@ -3,7 +3,7 @@
 set -ux
 
 LOCAL_URL=/tmp/image.xz
-REMOTE_URL=ftp://ftp.iris.dioptra.io/Armbian_22.08.0-trunk_Odroidn2_jammy_current_5.10.123_minimal.img.xz
+REMOTE_URL=http://download.edge-net.org/Armbian_22.08.0-trunk_Odroidn2_jammy_current_5.10.123_minimal.img.xz
 REMOTE_MD5=82f8aefcbb01285dd5fa8ae3a0e8b106
 
 # Download and write the disk image to the eMMC
