@@ -30,8 +30,9 @@ hwclock -w
 
 5. Set the boot script url:
 ```bash
-fw_setenv petitboot,userscript http://raw.githubusercontent.com/EdgeNet-project/hardware/main/boot/odroid-n2.sh
+fw_setenv petitboot,userscript https://odroid.edge-net.io/odroid-n2.sh
 ```
+The provided URL is an alias to https://raw.githubusercontent.com/EdgeNet-project/hardware/main/boot/odroid-n2.sh
 
 6. Update petitboot (we require version `20220317` at-least):
 ```bash
